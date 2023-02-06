@@ -21,7 +21,7 @@ if ( isset($data["uplink_message"]["decoded_payload"]["latitude"]) ) {
     // Insert values into table
     $db->exec("INSERT INTO locations VALUES ('$date', '$id', '$lat', '$lon', '$altitude', '$battery')");
 
-    //$db->exec("DELETE FROM locations WHERE date <= DateTime('now','-30 days')");
+    //$db->exec("DELETE FROM locations WHERE date <= DateTime('now','-90 days')");
 }
 
 $db->close();
